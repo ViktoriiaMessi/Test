@@ -59,6 +59,9 @@ body {
   background-size: cover; /* Заставляет изображение покрывать весь фон */
   background-repeat: no-repeat; /* Убирает повторение изображения */
   background-attachment: fixed; /* Фиксирует изображение на месте при прокрутке */
+  background-image: url("fone.jpg");
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay;
 }
 
 /* ПЕРВЫЙ БЛОК */
@@ -256,7 +259,7 @@ body {
 
 /* СТИЛИЗАЦИЯ СЕКЦИИ CONTACT ME */
 .contact-section {
-  padding: 20px 20px 80px 20px; /* Увеличиваем нижний внутренний отступ секции */
+  padding: 20px 20px; /* Увеличиваем нижний внутренний отступ секции */
   max-width: 1000px;
   margin: 40px auto;
   background-color: #222;
@@ -273,6 +276,7 @@ body {
   color: #fdd835; /* Цвет текста */
   font-weight: bold; /* Жирный шрифт */
   text-align: center; /* Выравнивание текста */
+  margin-bottom: 30px;
 }
 
 /* Кнопка отправки формы */
@@ -303,8 +307,11 @@ body {
 }
 
 .contact-form label {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #e0e0e0;
+  text-align: left; /* Выравниваем текст по левому краю */
+  display: block; /* Делаем метки блочными для лучшего выравнивания */
+  margin-bottom: 3px; /* Добавляем небольшой отступ под метками для улучшения внешнего вида */
 }
 
 .contact-form input,
@@ -404,18 +411,195 @@ footer a:hover {
   color: #0b159d; /* Цвет при наведении для интерактивности, аналогичный стилю наверху */
 }
 
-/* Адаптивные стили для мобильных устройств */
+/* Адаптивные стили для МОБИЛЬНІХ устройств */
+/* Общие правила для предотвращения горизонтальной прокрутки */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) 
+.body {
+  background-image: url("fone.jpg");
+  background-color: rgba(0, 0, 0, 0.8); /* Добавляет слой цвета поверх изображения, делая его менее контрастным */
+  background-blend-mode: overlay; /* Смешивает цвет и изображение */
+}
+
+
+/* Адаптация элементов для мобильной версии */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
     padding: 10px;
+    background-color: #1a1a1a; /* Менее контрастный цвет, более мягкий для глаз */
   }
-  .header,
-  .footer {
+
+ /* Общие правила для предотвращения горизонтальной прокрутки */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Основные стили для заголовка "PORTFOLIO" */
+.home-section h1 {
+  font-size: 60px; /* Размер шрифта для десктопов */
+  padding-top: 155px; /* Смещает заголовок вниз */
+  display: block; /* Убедитесь, что заголовок занимает всю ширину для центрирования */
+  text-align: center; /* Центрируем текст */
+  margin-left: -100px; /* Сдвигаем заголовок немного влево */
+  
+  color: #ffffff; /* Цвет заголовка */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    background-image: url("fone.jpg");
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay;
+  }
+}
+
+  .home-section h1 {
+    font-size: 28px; /* Уменьшаем размер для мобильных устройств */
+    margin-top: 20px; /* Уменьшаем отступ сверху */
+  }
+
+  /* Логотип и меню */
+  .header {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
   }
-  .button {
-    width: 100%;
+
+  .nav-menu,
+  .menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     margin: 10px 0;
+  }
+
+  .nav-menu {
+    display: none; /* Скрыть меню, если нет hamburger-меню */
+  }
+
+  /* Изображения и разделы */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Блок About Me и другие секции */
+  section {
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Кнопки */
+  .contact-form button {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  /* Логотип в шапке */
+  .header img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  /* Полоски для gold-stripes */
+  .gold-stripes {
+    margin: 10px 0;
+  }
+}
+
+
+
+  /* Логотип и меню */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav-menu,
+  .menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-menu {
+    display: none; /* Скрыть меню, если нет hamburger-меню */
+  }
+
+  /* Изображения и разделы */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Блок About Me и другие секции */
+  section {
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Кнопки */
+  .contact-form button {
+    width: 100%;
+    margin: 40px 0;
+
+  
+  }
+
+  /* Логотип в шапке */
+  .header img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  /* Полоски для gold-stripes */
+  .gold-stripes {
+    margin: 10px 0;
+  }
+
+/* Адаптивные стили для кнопки в мобильной версии */
+@/* Исправление кнопки для мобильной версии */
+@media (max-width: 768px) {
+  .contact-form button,
+  .contact-form button {
+    width: 90%; /* Уменьшаем ширину кнопки, чтобы избежать выхода за рамки */
+    max-width: 90%; /* Максимальная ширина кнопки */
+    margin: 10px auto; /* Центрируем кнопку и добавляем отступ сверху и снизу */
+    display: block; /* Блочное отображение */
+    box-sizing: border-box; /* Чтобы учесть padding */
+    width: 90% !important;
+    max-width: 90% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-text {
+    display: none !important; /* Скрыть элемент с текстом в мобильной версии */
   }
 }
