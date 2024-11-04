@@ -403,3 +403,19 @@ footer a {
 footer a:hover {
   color: #0b159d; /* Цвет при наведении для интерактивности, аналогичный стилю наверху */
 }
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .header,
+  .footer {
+    flex-direction: column;
+  }
+  .button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
