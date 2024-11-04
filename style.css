@@ -456,7 +456,7 @@ html, body {
 /* Основные стили для заголовка "PORTFOLIO" */
 .home-section h1 {
   font-size: 60px; /* Размер шрифта для десктопов */
-  padding-top: 155px; /* Смещает заголовок вниз */
+  padding-top: 105px; /* Смещает заголовок вниз */
   display: block; /* Убедитесь, что заголовок занимает всю ширину для центрирования */
   text-align: center; /* Центрируем текст */
   margin-left: -100px; /* Сдвигаем заголовок немного влево */
@@ -603,3 +603,73 @@ html, body {
     display: none !important; /* Скрыть элемент с текстом в мобильной версии */
   }
 }
+
+@media (max-width: 768px) {
+  .skills-list li {
+    text-indent: -9999px; /* Убираем текст с экрана */
+    position: relative; /* Для возможности оставлять изображение на месте */
+  }
+
+  .skills-list li img {
+    text-indent: 0; /* Возвращаем значки в нормальное положение */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Центрируем значок по горизонтали */
+  }
+}
+@media (max-width: 768px) {
+  .skills-list {
+    gap: 40px; /* Увеличиваем пространство между значками только на мобильной версии */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section h2 {
+    margin-bottom: 30px; /* Увеличиваем отступ под заголовком "Skills" */
+    margin-top: 5px; /* Увеличиваем отступ над заголовком "Skills" */
+    font-size: 2rem;
+      }
+    }
+
+
+  .skills-list li {
+    margin-bottom: 20px; /* Увеличиваем отступы между значками по вертикали */
+  }
+
+
+@media (max-width: 768px) {
+  .skills-list img {
+    width: 50px; /* Увеличиваем размер значков */
+    height: auto; /* Сохраняем пропорции значков */
+  }
+}
+@media (max-width: 768px) {
+  .skills-section {
+    padding-bottom: 30px; /* Увеличиваем нижний отступ внутри секции */
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section p {
+    margin: 10px 0; /* Сбрасываем большие отступы и добавляем только сверху и снизу */
+    text-align: center; /* Центрируем текст */
+    position: static; /* Отменяем любые абсолютные или фиксированные позиции */
+    font-size: 1.2rem; /* Увеличиваем размер шрифта, чтобы текст был хорошо виден на мобильных устройствах */
+  }
+
+  .home-section {
+    padding-bottom: 40px; /* Добавляем дополнительное пространство внизу, чтобы текст не сливался с границей */
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    padding-bottom: 10px; /* Уменьшаем отступ снизу */
+  }
+
+  .home-section p {
+    margin-bottom: 10px; /* Уменьшаем нижний отступ у текста */
+  }
+  
+
+  
